@@ -1,0 +1,17 @@
+dist: xenial
+
+language: python
+
+python:
+  - "3.7"
+
+services:
+  - docker
+
+before_install:
+  - docker build . -t stock-of-the-day:0.1
+  - docker images
+  - docker run -d -p 127.0.0.1:8080:4999 stock-of-the-day:0.1
+
+script:
+  - bash test.sh
