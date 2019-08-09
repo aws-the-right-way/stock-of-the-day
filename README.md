@@ -1,1 +1,1 @@
-# stock-of-the-day
+# stock-of-the-day [![Build Status](https://travis-ci.com/aws-the-right-way/stock-of-the-day.svg?branch=master)](https://travis-ci.com/aws-the-right-way/stock-of-the-day)
