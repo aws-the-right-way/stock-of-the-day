@@ -2,7 +2,14 @@ import os
 
 
 class Config(object):
+    STOCK_SYMBOL_SERVICE_HOST=os.environ.get('STOCK_SYMBOL_SERVICE_SERVICE_SERVICE_HOST')
+    STOCK_SYMBOL_SERVICE_PORT=os.environ.get('STOCK_SYMBOL_SERVICE_SERVICE_SERVICE_PORT')
+
+    LOGO_RESIZER_SERVICE_HOST = os.environ.get('LOGO_RESIZER_SERVICE_SERVICE_SERVICE_HOST')
+    LOGO_RESIZER_SERVICE_PORT = os.environ.get('LOGO_RESIZER_SERVICE_SERVICE_SERVICE_PORT')
+
+
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'not-today'
-    STOCK_SYMBOL_SERVICE_URL = "http://localhost:5000/api/stocks"
-    LOGO_RESIZER_SERVICE_URL = "http://localhost:5001/api/upload_image"
+    STOCK_SYMBOL_SERVICE_URL = 'http://' + STOCK_SYMBOL_SERVICE_HOST + ':' + STOCK_SYMBOL_SERVICE_PORT + '/api/stocks'
+    LOGO_RESIZER_SERVICE_URL = 'http://' + LOGO_RESIZER_SERVICE_HOST + ':' + LOGO_RESIZER_SERVICE_PORT + '/api/upload_image'
     LOG_TO_STDOUT = os.environ.get('LOG_TO_STDOUT')

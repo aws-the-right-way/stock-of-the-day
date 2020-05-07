@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: stock-of-the-day-loadbalancer
+spec:
+  type: LoadBalancer
+  ports:
+    - port: 8080
+      targetPort: 4999
+  selector:
+    app: frontend

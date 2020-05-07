@@ -13,6 +13,7 @@ logger = logging.getLogger('routes')
 @bp.route('/')
 @bp.route('/index', methods=['GET', 'POST'])
 def index():
+    logger.warning("Connecting to -> " + current_app.config['STOCK_SYMBOL_SERVICE_URL'])
     response = requests.get(current_app.config['STOCK_SYMBOL_SERVICE_URL'])
     data = response.json()
     stock = {'name': data['stock']['name'],

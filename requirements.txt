@@ -5,3 +5,4 @@ Jinja2==2.10.1
 requests==2.22.0
 WTForms==2.2.1
 tenacity==5.0.4
+Werkzeug==0.16.0
